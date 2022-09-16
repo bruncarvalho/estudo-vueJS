@@ -1,12 +1,13 @@
 <template>
   <header>
     <h1>To-Do</h1>
- 
+  </header>
   
+  {{novaTarefa}}
     <div class="container">
       
     <form>
-      <input type="text" placeholder="Nova tarefa" />
+      <input type="text" placeholder="Nova tarefa" v-model="novaTarefa" />
     </form>
     <ul>
       <li>
@@ -25,16 +26,20 @@
         Por Bruna © 2022
       </p>
     </footer>
-  </header>
+ 
 
   <main>
     <TheWelcome />
   </main>
 </template>
 
-<script setup>
-
-
+<script>
+  export default {
+  setup(){
+    const novaTarefa = 'Outra nova tarefa';
+    return {novaTarefa};
+  }
+};
 </script>
 
 
